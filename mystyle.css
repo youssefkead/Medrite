@@ -1,8 +1,11 @@
 body {
- <!-- background-image: url('logo-white.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: contain; -->
+  /* background-image: url('logo-white.png');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: contain; */
+  background-color: white;
+  color: black;
+  padding: 25px;
 }
 .button {
   border: none;
@@ -24,49 +27,35 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: relative;
   display: inline-block;
+  position: relative;
 }
 
-/* Dropdown Content (Hidden by Default) */
+.dropdown-menu {
+  font-size: 24px;
+  padding: 32px 16px;
+}
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
 }
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+.dropdown:hover .dropdown-content {
   display: block;
 }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.dropdown-content a {
+  display: block;
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: black;
+  background-color: #00A4BD;
+}
 
 .btn {
   border: none;
@@ -85,6 +74,7 @@ body {
   background-color: white;
   color: black;
   border: 2px solid #008CBA;
+  width: 100%;
 }
 
 .button2:hover {
@@ -92,10 +82,23 @@ body {
   color: white;
 }
 
-.container {
-  height: 200px;
+.button-container {
+  height: 100px;
+  width: 350px;
   position: relative;
   border: 3px solid green;
+}
+
+.dropdown-container {
+  height: 200px;
+  position: relative;
+  border: 0px solid;
+}
+
+.art-container{
+height: 180px;
+position: relative;
+
 }
 
 .vertical-center {
@@ -104,4 +107,11 @@ body {
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+.horizontal-center {
+  margin: 0;
+  position: relative;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
