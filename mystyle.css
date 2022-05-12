@@ -73,6 +73,7 @@ background-color:blue;
   padding: 5px;
   text-decoration: none;
   background-color: white;
+  padding: 20px;
 }
 .dropdown-content a:hover {
   color: black;
@@ -123,6 +124,7 @@ background-color:blue;
 .art-container{
 height: 180px;
 position: relative;
+padding: 2px;
 
 }
 
