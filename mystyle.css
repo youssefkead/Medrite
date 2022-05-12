@@ -1,12 +1,31 @@
 body {
-  /* background-image: url('logo-white.png');
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-size: contain; */
-  background-color: white;
-  color: black;
+  /*background-image: url('medrite reception.jpg');*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center;
+  background-color: black;
+  color: white;
   padding: 25px;
 }
+
+@font-face {
+  font-family: retro;
+  src: url(retro_computer_personal_use.ttf);
+}
+
+.shadow-center-text {
+  text-shadow: 2px 2px rgba(255,255,255,0.2);
+  text-align:center;
+  font-family: retro;
+}
+
+pre {
+
+background-color:blue;
+
+}
+
 .button {
   border: none;
   color: white;
@@ -35,6 +54,7 @@ body {
 .dropdown-menu {
   font-size: 24px;
   padding: 32px 16px;
+  font-family: retro;
 }
 .dropdown-content {
   display: none;
@@ -42,6 +62,7 @@ body {
   width: 100%;
   overflow: auto;
   box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  font-family: retro;
 }
 .dropdown:hover .dropdown-content {
   display: block;
@@ -51,13 +72,15 @@ body {
   color: black;
   padding: 5px;
   text-decoration: none;
+  background-color: white;
 }
 .dropdown-content a:hover {
   color: black;
   background-color: #00A4BD;
 }
 
-.btn {
+/*
+ .btn {
   border: none;
   color: white;
   padding: 16px 32px;
@@ -88,11 +111,13 @@ body {
   position: relative;
   border: 3px solid green;
 }
+*/
 
 .dropdown-container {
   height: 200px;
   position: relative;
   border: 0px solid;
+  font-family: retro;
 }
 
 .art-container{
@@ -108,6 +133,7 @@ position: relative;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
 .horizontal-center {
   margin: 0;
   position: relative;
