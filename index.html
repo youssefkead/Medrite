@@ -1,45 +1,143 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="mystyle.css">
+<link rel="icon" type="image/x-icon" href="medrite-logo.png">
 <title>Medrite Urgent Care</title>
+<script src="myScript.js"></script>
 </head>
 <body>
 
-<h2 class="shadow-center-text">Patient Support Center Internal Escalations Tool</h2>
-<div class="art-container">
-<pre class="center">
+<h1 class="shadow-center-text">Patient Support Center Internal Escalations Tool</h1>
+<p class="shadow-center-text">Choose from the drop-down menu</p>
 
- ███    ███ ███████ ██████  ██████  ██ ████████ ███████     ██    ██ ██████   ██████  ███████ ███    ██ ████████      ██████  █████  ██████  ███████
- ████  ████ ██      ██   ██ ██   ██ ██    ██    ██          ██    ██ ██   ██ ██       ██      ████   ██    ██        ██      ██   ██ ██   ██ ██
- ██ ████ ██ █████   ██   ██ ██████  ██    ██    █████       ██    ██ ██████  ██   ███ █████   ██ ██  ██    ██        ██      ███████ ██████  █████
- ██  ██  ██ ██      ██   ██ ██   ██ ██    ██    ██          ██    ██ ██   ██ ██    ██ ██      ██  ██ ██    ██        ██      ██   ██ ██   ██ ██
- ██      ██ ███████ ██████  ██   ██ ██    ██    ███████      ██████  ██   ██  ██████  ███████ ██   ████    ██         ██████ ██   ██ ██   ██ ███████ 
 
-                                                                                                                                                    </pre>
-</div>
-<!-- <div class="button-container horizontal-center">
-  <div class="center">
-  <a href="https://pointerpointer.com/">
-    <button class="btn button2">Click Me!</button>
-  </a>
+<div>
+  <label for="select-tool"></label>
 
-  </div>
-</div> -->
-<div class="dropdown-container">
-<div class="dropdown center">
-<button class="dropdown-menu">Hover Over This Button To Show The Available Options</button>
-<div class="dropdown-content">
-<a href="https://forms.gle/2HdEUwFyYfcyPBYo7" target="_blank">Adding/Changing patient's information</a>
-<a href="https://forms.gle/rZi5W4C8bagqJCYh7" target="_blank">Send Results Via Call Center Email</a>
-<a href="https://forms.gle/34YK2qButjDFZXqC7" target="_blank">Suprevisor Call-Back Request</a>
-<a href="https://forms.gle/Vt4sQibgcpMY3azv7" target="_blank">Prescription Related Issues</a>
-<a href="https://forms.gle/hDjDQ5YfnvTLgrpq9" target="_blank">AHT Late Results/Incorrect Information Report</a>
-<a href="https://forms.gle/ddu9uHsZ7kZ766Bc6" target="_blank">BOE</a>
+<select name="select-tool" onchange="getSelectedValue();" id="select-tool">
+    <option class="option-text" value="https://forms.gle/2HdEUwFyYfcyPBYo7">Adding/Changing patient's information</option>
+    <option class="option-text" value="https://forms.gle/rZi5W4C8bagqJCYh7">Send Results Via Call Center Email</option>
+    <option class="option-text" value="https://forms.gle/34YK2qButjDFZXqC7">Suprevisor Call-Back Request</option>
+    <option class="option-text" value="https://forms.gle/Vt4sQibgcpMY3azv7">Prescription Related Issues</option>
+    <option class="option-text" value="https://forms.gle/hDjDQ5YfnvTLgrpq9">AHT Late Results/Incorrect Information Report</option>
+    <option class="option-text" value="https://forms.gle/ddu9uHsZ7kZ766Bc6">BOE</option>
+</select>
 </div>
+
+
+
+
+<div  class="button-container">
+  <a class="" href="#" id="selected-link" target="_blank"><button value="" class="go-button">Go!</button></a>
 </div>
+<script>
+getSelectedValue();
+</script>
+
+
+
+<div class="timer-container">
+<h1  class="counter-container">
+  <span id="hour">00</span> :
+  <span id="min">00</span> :
+  <span id="sec">00</span> :
+  <span id="millisec">00</span>
+</h1>
+
+<button class="start-button" onclick="startStop()" id="start">Start</button>
+<button class="reset-button" onclick="reset()">Reset</button>
 </div>
+<script>
+let x;
+let startstop = 0;
+
+
+const start = () => {
+  x = setInterval(timer, 10);
+} /* Start */
+
+const stop = () => {
+  clearInterval(x);
+}
+
+let millisec = 0;
+let sec = 0;
+let min = 0;
+let hour = 0;
+let miliSecOut = 0;
+let secOut = 0;
+let minOut = 0;
+let hourOut = 0;
+
+const checkTime = (i) => {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+
+const timer = () => {
+  milliSecOut = checkTime(millisec);
+  secOut = checkTime(sec);
+  minOut = checkTime(min);
+  hourOut = checkTime(hour);
+
+  millisec = ++millisec ;
+
+  if (millisec  === 100) {
+    millisec = 0;
+    sec = ++sec;
+  }
+
+  if (sec == 60) {
+    min = ++min;
+    sec = 0;
+  }
+
+  if (min == 60) {
+    min = 0;
+    hour = ++hour;
+
+  }
+
+
+  document.getElementById("millisec").innerHTML = milliSecOut;
+  document.getElementById("sec").innerHTML = secOut;
+  document.getElementById("min").innerHTML = minOut;
+  document.getElementById("hour").innerHTML = hourOut;
+
+}
+
+
+const reset = () => {
+  millisec = 0;
+  sec = 0;
+  min = 0
+  hour = 0;
+
+  document.getElementById("millisec").innerHTML = "00";
+  document.getElementById("sec").innerHTML = "00";
+  document.getElementById("min").innerHTML = "00";
+  document.getElementById("hour").innerHTML = "00";
+}
+
+
+const startStop = () => {
+  startstop = startstop + 1;
+
+  if (startstop === 1) {
+    start();
+    document.getElementById("start").innerHTML = "Stop";
+  } else if (startstop === 2) {
+    document.getElementById("start").innerHTML = "Start";
+    startstop = 0;
+    stop();
+  }
+}
+
+</script>
 
 </body>
 </html>
