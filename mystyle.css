@@ -1,5 +1,5 @@
 body {
-  background-image: url('medical.jpg');
+  background-image: url('myv.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -11,9 +11,10 @@ body {
   height:auto;
   background-image:
     linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)),url(medical.jpg);
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)),url(myv.jpg);
   font-family: retro;
+  /*background-blend-mode: saturation, luminosity;*/
 }
 
 @font-face {
@@ -63,9 +64,9 @@ body {
   display: inline-block;
 
   margin: 4px 2px;
-  transition-duration: 0.1s;
+  transition: border-radius 0.20s, color 0.1s;
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 5px;
   font-size: 30px;
   font-family: retro;
 
@@ -81,18 +82,18 @@ body {
 .go-button:hover {
   background-color: #008CBA;
   color: white;
+  border-radius: 30px
 }
 
 .button-container {
-  top: 250px;
-  height: 100%;
+
+  top: 500px;
   width: 100%;
-  position: relative;
+  position: fixed;
 
   margin: 0;
-  position: relative;
-  left: 49.5%;
-  -ms-transform: translateX(-50%);
+  left: 50%;
+  transform: translateY(-50%);
   transform: translateX(-50%);
 
 }
@@ -117,38 +118,54 @@ body {
 
 .timer-container {
   position: fixed;
-  bottom: 77px;
+  /*background-color: black;*/
+  width: 100%;
+  height: 150px;
+  bottom: 0px;
   margin: 0;
   left: 50%;
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: 1000px
 }
 
 .counter-container{
 position: relative;
+text-align: center;
 width: 400px;
 height: 50px;
-left: 60%;
+padding-left: 50%;
+padding-right: 50%;
+margin-left: 50%;
+margin-right: 50%;
 transform: translateX(-50%);
 }
 
+.timer-buttons{
+position: absolute;
+text-align: center;
+transform: translateX(-50%);
+left: 50%;
+
+bottom: 30px;
+width: 300px;
+height: 50px;
+}
+
+
 .start-button{
   margin: 0;
-  position: relative;
-  left: 45%;
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  position: absolute;
+  left: 10%;
+
   font-size: 25px;
 
 }
 
 .reset-button{
   margin: 0;
-  position: relative;
-  left: 48.5%;
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  position: absolute;
+  right: 10%;
+
   font-size: 25px;
 
 }

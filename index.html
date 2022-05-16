@@ -17,7 +17,7 @@
   <label for="select-tool"></label>
 
 <select name="select-tool" onchange="getSelectedValue();" id="select-tool">
-    <option class="option-text" value="https://forms.gle/2HdEUwFyYfcyPBYo7">Adding/Changing patient's information</option>
+    <option class="option-text" value="https://forms.gle/2HdEUwFyYfcyPBYo7">Adding/Changing Patient's Information</option>
     <option class="option-text" value="https://forms.gle/rZi5W4C8bagqJCYh7">Send Results Via Call Center Email</option>
     <option class="option-text" value="https://forms.gle/34YK2qButjDFZXqC7">Suprevisor Call-Back Request</option>
     <option class="option-text" value="https://forms.gle/Vt4sQibgcpMY3azv7">Prescription Related Issues</option>
@@ -46,8 +46,12 @@ getSelectedValue();
   <span id="millisec">00</span>
 </h1>
 
+<div class="timer-buttons">
 <button class="start-button" onclick="startStop()" id="start">Start</button>
 <button class="reset-button" onclick="reset()">Reset</button>
+</div>
+
+</div>
 </div>
 <script>
 let x;
