@@ -153,19 +153,35 @@ height: 50px;
 
 
 .start-button{
+    border: none;
   margin: 0;
   position: absolute;
-  left: 10%;
-
+  left: 20%;
+transition: border-radius 0.20s, color 0.1s;
   font-size: 25px;
+border-radius: 10px;
+}
+.start-button:hover {
+  background-color: #008CBA;
+  color: white;
+  /*border-radius: 30px*/
 
 }
 
 .reset-button{
+    border: none;
   margin: 0;
   position: absolute;
-  right: 10%;
-
+  right: 20%;
+transition: border-radius 0.20s, color 0.02s;
   font-size: 25px;
+border-radius: 10px;
+}
+
+.reset-button:hover {
+
+  background-color: #008CBA;
+  color: white;
+  /*border-radius: 30px*/
 
 }
