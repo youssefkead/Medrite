@@ -1,4 +1,5 @@
 body {
+  /*SPECIAL THANKS TO MIEVEE FOR THE COOL PIC*/
   background-image: url('myv.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -23,10 +24,16 @@ body {
 }
 
 .shadow-center-text {
-  text-shadow: 2px 2px rgba(255,255,255,0.2);
+  text-shadow: 2px 2px rgba(0,0,0,0.7);
   text-align:center;
 
 }
+
+/*
+.outline-text{
+  -webkit-text-stroke: 0.4px black;
+}
+*/
 
 #select-tool {
   width: 100%;
@@ -150,6 +157,7 @@ bottom: 30px;
 width: 300px;
 height: 50px;
 }
+
 
 
 .start-button{
