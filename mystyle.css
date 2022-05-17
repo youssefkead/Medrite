@@ -11,8 +11,8 @@ body {
   height:auto;
   background-image:
     linear-gradient(
-      rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 1.0)),url(myv.jpg);
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.8)),url(myv.jpg);
   font-family: retro
   /*background-blend-mode: saturation, luminosity;*/
 }
